@@ -1,0 +1,212 @@
+/* RESET CSS */
+* {padding: 0; margin: 0; box-sizing: border-box;}
+body {font-family: sans-serif; font-size: 15px; color: #555;}
+h1, h2, h3, h4, h5, h6 {font-weight: 100;}
+input, textarea, a, button {outline: 0;}
+a {text-decoration: none}
+ul li {list-style: none;}
+.clearfix {clear: both;}
+.danger {background-color: #d9534f; color: white;}
+.success {background-color: #5cb85c}
+
+/* Navbar */
+.main-navbar {padding: 15px; text-align: center; border-bottom: 1px solid #e5e5e5;}
+.main-navbar h1 {color: #428bca;}
+
+/* Form Login & Register */
+.box-join {text-align: center; padding: 20px 10px;}
+#formJoin .data-input {display: block; margin: auto; margin-top: 10px; padding: 8px 7px; border: 1px solid #ccc; font-size: 15px; width: 300px; color: #555; max-width: calc(100% - 16px);}
+#formJoin .btn-submit {margin-top: 10px; padding: 8px 15px; background-color: #428bca; color: #fff; border: 1px solid #428bca; font-size: 15px; }
+#formJoin .btn-danger {margin-top: 10px; padding: 9px 15px; padding-top: 11px; background-color: red; color: #fff; border: 1px solid; font-size: 15px; }
+#formJoin .btn-submit:hover, .btn-danger:hover {cursor: pointer; opacity: 0.9;}
+#formJoin .alert {color: #fff; width: 300px; padding: 8px 7px; margin: auto; margin-top: 10px; text-align: left; display: none;}
+
+/* Menu */
+.main-menu {padding: 10px 5%; border-bottom: 1px solid #e5e5e5; width: 100%; position: fixed; background-color: #fff;}
+.main-menu h1 {color: #428bca; display: inline-block;}
+.main-menu a {display: inline-block; float: right; color: #555; font-size: 30px; margin-left: 15px;}
+#logo {width: 25%; float: left;}
+#notification {width: 50%; float: left; text-align: center;}
+
+/* Form chat */
+.box-chat {position: fixed; bottom: 0; width: 25%; border-top: 1px solid #e5e5e5; border-right: 1px solid #e5e5e5; background-color: white;}
+#formSendMsg input[type=text] {width: 100%; padding: 10px; font-size: 15px; color: #555; border: 0;}
+
+#main, #online_users {
+	margin-top: 5%;
+	overflow-y: scroll;
+	height: 555px;
+}
+
+/* Show chat */
+#main { width: 25%; float: left; display: inline-block;}
+.main-chat {height: auto; width: 100%; padding: 10px 10px 38px 10px;}
+.msg-user {width: 100%; text-align: right; margin-bottom: 10px;}
+.msg-user p {background-color: #428bca; color: #fff; display: inline-block; padding: 10px; font-size: 15px;}
+.msg {width: 100%; text-align: left; margin-bottom: 10px;}
+.msg p {background-color: #f1f1f1; color: #555; display: inline-block; padding: 10px; font-size: 15px;}
+.msg-user .info-msg-user,
+.msg .info-msg {font-size: 13px; color: #666; margin-top: 5px;}
+
+/* Private */
+#private {
+    margin-top: 5%;
+	width: 50%;
+	display: inline-block;
+	float: left;
+}
+
+.private_chat {
+	height: 480px; width: 100%; padding: 10px 10px 38px 10px; border-right: 1px solid #e5e5e5; overflow-y: scroll; margin-top: 6%;
+}
+
+/* Box_private */
+.box_private {position: fixed; bottom: 0; width: 50%; border-top: 1px solid #e5e5e5; background-color: white;}
+.form_private input {padding: 10px; font-size: 15px; color: #555; border: 0; width: 100%;}
+/* Vùng hiển thị user online và bạn bè */
+#show_friend_and_user {
+    /*float: right;*/
+}
+/* #Online users */
+#online_users{margin-top: 76px; width: 25%; background-color: grey; display: inline-block; height: 250px; color: white;}
+
+#online_users h3 {
+    padding-top: 4px;
+    height: 31px;
+    border-bottom: 1px solid yellow;
+    text-align: center;
+}
+
+#online_users ul li {
+    height: 30px;
+    border-bottom: 1px solid yellow;
+    padding-top: 3px;
+}
+
+.private_msg {
+    padding-left: 5px;
+    cursor: pointer;
+    display: inline;
+}
+
+.add_friend {
+    height: 23px;
+    width: 70px;
+    text-align: center;
+    float: right;
+    margin-right: 10px;
+    cursor: pointer;
+    background-color: green;
+    display: inline-block;
+}
+
+.waiting {
+    height: 23px;
+    width: 90px;
+    text-align: center;
+    float: right;
+    cursor: default;
+    margin-right: 10px;
+    background-color: red;
+    display: inline-block;
+}
+
+.accept {
+    height: 23px;
+    width: 80px;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: blue;
+    display: inline-block;
+}
+
+.decline {
+    height: 23px;
+    width: 80px;
+    text-align: center;
+    float: right;
+    cursor: pointer;
+    margin-right: 10px;
+    background-color: brown;
+    display: inline-block;
+}
+
+.fa-users {
+    float: right;
+    padding-right: 10px;
+}
+
+/* Vùng hiển thị danh sách bạn bè */
+#friend_list_container {
+    float: right;
+    width: 25%;
+    background-color: green;
+    height: 300px;
+    overflow-y: scroll;
+}
+
+#show_friend_list {
+    color: white;
+}
+
+#show_friend_list li {
+    cursor: pointer;
+    padding-left: 8px;
+    padding-top: 4px;
+    height: 30px;
+    border-bottom: 1px solid red;
+}
+
+/*Tạo tab chat*/
+.close_private {
+    float: right;
+    padding-left: 10px;
+    cursor: pointer;
+}
+
+ul#tabs {
+    margin: 0;
+    padding: 0;
+    margin-top: 1.1%;
+    float: left;
+    list-style-type: none;
+    height: 32px;
+    border-bottom: 1px solid #999;
+    width: 100%;
+    background: white;
+}
+
+ul#tabs li{
+    float: left;
+    margin: 0;
+    padding-left: 3px;
+    cursor: default;
+    height: 31px;
+    border: 1px solid #999;
+    border-left: none;
+    font-weight: bold;
+    background: #eee;
+    overflow: hidden;
+    position: relative;
+}
+
+ul#tabs li:first-child {
+    border-left: 1px solid #999;
+}
+
+ul#tabs li:hover {
+    background: #ccc;
+}
+
+ul#tabs li.active {
+    background: #fff;
+    border-bottom: 1px solid #fff;
+}
+
+#tab_container {
+    border-top: none;
+    width: 100%;
+    background: #fff;
+}
