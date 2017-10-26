@@ -1,4 +1,5 @@
 <?php
+	// Test git hub phát
 	include('includes/general.php');
 	if(!empty($_POST['friend']))
 		$friend = $_POST['friend'];
