@@ -5,8 +5,10 @@
 	if($friend_list_string = ($result_select_friend_list->fetch_assoc())) {
 		$friends = array();
 		$friends = json_decode($friend_list_string['friend_list']);
-		foreach($friends as $friend) {
-			echo '<li><p id="show_' . $friend . '" class="show_friends"><i>'.$friend. '</i></p></li>';
+		if($friends) {
+			foreach($friends as $friend) {
+				echo '<li><p id="show_' . $friend . '" class="show_friends"><i>'.$friend. '</i></p></li>';
+			}			
 		}
 	}
 ?>
