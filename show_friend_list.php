@@ -1,4 +1,5 @@
 <?php
+	// comment
 	include('includes/general.php');
 	$sql_select_friend_list = "SELECT friend_list FROM users WHERE username = '$user'";
 	$result_select_friend_list = $cn->query($sql_select_friend_list);
