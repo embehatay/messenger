@@ -10,6 +10,7 @@
 	<script src="js/add_friend.js"></script>
 	<script src="js/message_notifi.js"></script>
 	<script src="js/show_friend_list.js"></script>
+	<script src="js/request_close_chat.js"></script>
 	<!-- Kết nối file js/autoload.js -->
 	<script src="js/my_autoload.js"></script>
 </body>

@@ -43,11 +43,12 @@ function get_message(private_chat, chatter) {
 			user_session: user_session,
 			chatter: chatter
 		}, success : function(result) {
-			if(result)
+			if(result) {
 				$("#" + private_chat).append(result);
 				var wtf = $('#' + private_chat);
 				var height = wtf[0].scrollHeight;
 				wtf.scrollTop(height);
+			}
 		}
 	});
 }
@@ -103,7 +104,7 @@ $('#formSendMsg input[type="text"]').click(function(e) {
 
 // Tạo mảng để lưu lại những thằng đang chat cùng
 var notificated_to = [];
-// Mảng lưu lại những file đang bật lên dùng để bật/tắt thông báo tin nhắn
+// Mảng lưu lại những file đang bật lên dùng để bật/tắt thông báo tin nhắn và thông báo đăng xuất
 var file_name = [];
 // Tạo đối tượng lưu lại các cái Interval
 var assoc_message = {};
@@ -118,7 +119,7 @@ function create_tab_chat(chatter, private_chat) {
     $(".private_chat").hide();
     $(".box_private").hide();
 	//Tạo tiêu đề chat
-	var header1 = $('<li rel="'+private_chat+'" class="active"><strong>'+ chatter +'</strong><span class="close_private"><i class="fa fa-window-close" aria-hidden="true"></i></span></li>');
+	var header1 = $('<li rel="'+private_chat+'" class="active"><strong>'+ chatter +'</strong><span id="request_button_'+ private_chat +'" class="request_close_chat"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span><span class="close_private"><i class="fa fa-window-close" aria-hidden="true"></i></span></li>');
 	//Tạo form nhap tin nhan
 	var form_id = "form_" + private_chat;
 	var le1 = $('<div id='+form_id+' class="box_private"></div>');
@@ -157,9 +158,11 @@ function create_tab_chat(chatter, private_chat) {
 	});
 	var load_message = setInterval(function() {get_message(private_chat, chatter);}, 1000);
 	var load_close_tab_notification = setInterval(function() {get_close_tab_notification(private_chat, del_close_notif_first);}, 5000);
+	var load_request_close_notification = setInterval(function() {get_request_close_notification(private_chat, del_close_notif_first, chatter);}, 5000);
 	// Quăng interval vô đối tượng này để về sau tắt
 	assoc_message[private_chat] = load_message;
 	assoc_message['close_tab' + private_chat] = load_close_tab_notification;
+	assoc_message['request_close' + private_chat] = load_request_close_notification;
 }
 
 // Cái này để xử lý phần chat solo khi click từ vùng user online
@@ -169,9 +172,12 @@ $(document).on("click", ".private_msg", function() {
 		var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 		// Nếu không tồn tại tab chat giữa 2 thằng thì tạo tab chat
 		if(!document.getElementById(private_chat)) {
-			if(del_close_notif_first) {
+			if(del_close_notif_first == 1) {
+				// Khi 1 thằng ấn vào tên thằng khác để chat thì phải xóa trường user_chat_with trước trong cả 2 bảng để 
+				// chỉ hiện thông báo khi cả 2 thằng đang chat cùng nhau
 				get_close_tab_notification(private_chat, del_close_notif_first);
-				del_close_notif_first = false;
+				get_request_close_notification(private_chat, del_close_notif_first, chatter);
+				del_close_notif_first = 0;
 			}
 			create_tab_chat(chatter, private_chat);
 		}
@@ -183,28 +189,39 @@ $(document).on("click", ".show_friends", function() {
 	var chatter = $(this).children().html();
 	var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 	if(!document.getElementById(private_chat)) {
-		if(del_close_notif_first === 1) {
+		if(del_close_notif_first == 1) {
 			get_close_tab_notification(private_chat, del_close_notif_first);
+			get_request_close_notification(private_chat, del_close_notif_first, chatter);
 			del_close_notif_first = 0;
 		}
 		create_tab_chat(chatter, private_chat);
 	}
 });
 
-//Khi 1 user log out thì thông báo cho những thằng đang chat cùng biết
-$("#logout").click(function() {
+//Gửi thông báo về cho user trong mảng notificated_to
+function get_logout_notification() {
 	$.ajax({
-		url: "logout.php",
+		url: "get_logout_notification.php",
 		type: "post",
 		dataType: "text",
 		data: {
-			notificated_to: notificated_to
+
 		},
 		success : function(result) {
-			alert(result);
+			if(result) {
+				var file_using = (result < user_session) ? result + '_' + user_session : user_session + '_' + result;
+				if(document.getElementById(file_using)) {
+					$("#" + file_using).append("<p style='color: red'>Người dùng <strong>" + result + "</strong> đã đăng xuất</p>");
+					var wtf = $('#' + file_using);
+					var height = wtf[0].scrollHeight;
+					wtf.scrollTop(height);					
+				}
+			}
 		}
 	});
-});
+}
+
+setInterval(get_logout_notification, 4000);
 
 // Khi 1 user tắt tab chat thì thông báo cho thằng đang chat cùng nó biết
 var del_close_notif_first = 1;
@@ -223,7 +240,29 @@ function get_close_tab_notification(private_chat, del_close_notif_first) {
 				var wtf = $('#' + private_chat);
 				var height = wtf[0].scrollHeight;
 				wtf.scrollTop(height);
-				previous_close_tab_notif = result;
+			}
+		}
+	});
+}
+
+// Thông báo khi 1 thằng yêu cầu tắt chat
+function get_request_close_notification(private_chat, del_close_notif_first, chatter) {
+	$.ajax({
+		url : "get_request_close_notification.php",
+		type: "post",
+		dataType : "text",
+		data : {
+			chatter : chatter,
+			del_close_notif_first : del_close_notif_first,
+			private_chat : private_chat
+		},
+		success : function(result) {
+			if(result) {
+				$('#' + private_chat).append("<p style='color: red'>Người dùng <strong>" + result + "</strong> đã yêu cầu tắt cuộc trò chuyện</p>");
+				$('#request_button_' + private_chat).remove();
+				var wtf = $('#' + private_chat);
+				var height = wtf[0].scrollHeight;
+				wtf.scrollTop(height);
 			}
 		}
 	});

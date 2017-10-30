@@ -166,6 +166,11 @@ ul li {list-style: none;}
     cursor: pointer;
 }
 
+.request_close_chat {
+    cursor: pointer;
+    margin-left: 15px;
+}
+
 ul#tabs {
     margin: 0;
     padding: 0;

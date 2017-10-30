@@ -1,0 +1,1089 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"met",
+				"meta\tTag"
+			],
+			[
+				"file",
+				"file_name"
+			],
+			[
+				"fi",
+				"file_name"
+			],
+			[
+				"user",
+				"user_chat_with"
+			],
+			[
+				"ale",
+				"alert〔function〕"
+			],
+			[
+				"request",
+				"request_close_chat\t(style.css)"
+			],
+			[
+				"private",
+				"private_chat"
+			],
+			[
+				"clos",
+				"close_tab_notification"
+			],
+			[
+				"date",
+				"date_created"
+			],
+			[
+				"sql",
+				"sql_update"
+			],
+			[
+				"clo",
+				"close_tab_notification"
+			],
+			[
+				"close",
+				"close_tab_notification\t(private_tab.js)"
+			],
+			[
+				"file_name",
+				"file_name_using"
+			],
+			[
+				"file_",
+				"file_name_using"
+			],
+			[
+				"max",
+				"max-height"
+			],
+			[
+				"print",
+				"print_data($five_news\t(MY_Controller.php)"
+			],
+			[
+				"cata",
+				"catalog_level2"
+			],
+			[
+				"ca",
+				"catalog_level1"
+			],
+			[
+				"catalog",
+				"catalog_level1\t(MY_Controller.php)"
+			],
+			[
+				"catalog_le",
+				"catalog_level2s"
+			],
+			[
+				"cat",
+				"catalog_level1s"
+			],
+			[
+				"paddi",
+				"padding-top"
+			],
+			[
+				"pre",
+				"previous_friend_list"
+			],
+			[
+				"friend",
+				"friend_list"
+			],
+			[
+				"BorderL",
+				"BORDERLAYOUT\tJava Class"
+			],
+			[
+				"VERTICAL_SC",
+				"S-VERTICAL_SCROLLBAR_ALWAYS\tstatic"
+			],
+			[
+				"setLa",
+				"setLayout()\tfunc"
+			],
+			[
+				"im",
+				"imt\timport junit.framework.TestCase;"
+			],
+			[
+				"java",
+				"javax.swing\t(Button1.java)"
+			],
+			[
+				"setVi",
+				"setVisible()\tfunc"
+			],
+			[
+				"J",
+				"JButton"
+			],
+			[
+				"temp",
+				"temp_array"
+			],
+			[
+				"Ac",
+				"ActionEvent\t(SimpleGui1B.java)"
+			],
+			[
+				"set",
+				"set_rules"
+			],
+			[
+				"new",
+				"news_data"
+			],
+			[
+				"My",
+				"MyInner"
+			],
+			[
+				"load",
+				"load_message\t(sendmsg_error.js)"
+			],
+			[
+				"array",
+				"array_search\t(accept_friend.php)"
+			],
+			[
+				"result_",
+				"result_not_received"
+			],
+			[
+				"Gra",
+				"Graphics2D"
+			],
+			[
+				"image_",
+				"image_link"
+			],
+			[
+				"pri",
+				"private_chat"
+			],
+			[
+				"in",
+				"instrument_change"
+			],
+			[
+				"wai",
+				"waiting_list\t(usermysql.php)"
+			],
+			[
+				"frie",
+				"friend"
+			],
+			[
+				"json",
+				"json_encode"
+			],
+			[
+				"row",
+				"row_request"
+			],
+			[
+				"fri",
+				"friend"
+			],
+			[
+				"array_",
+				"array_search\t(usermysql.php)"
+			],
+			[
+				"req",
+				"request_list"
+			],
+			[
+				"json_",
+				"json_decode"
+			],
+			[
+				"error",
+				"error_message\t(index.php)"
+			],
+			[
+				"sql_sel",
+				"sql_select_request_list"
+			],
+			[
+				"get_li",
+				"get_list_set_input\t(MY_Model.php)"
+			],
+			[
+				"luo",
+				"luongCoBan\t(NhanVien.java)"
+			],
+			[
+				"temp_",
+				"temp_array_2"
+			],
+			[
+				"te",
+				"temp_array"
+			],
+			[
+				"resu",
+				"result_select"
+			],
+			[
+				"Sy",
+				"System.out.println(\"Dog"
+			],
+			[
+				"docume",
+				"document"
+			],
+			[
+				"not",
+				"not_received"
+			],
+			[
+				"A",
+				"ActionEvent"
+			],
+			[
+				"setDef",
+				"setDefaultCloseOperation\t(SimpleGui1B.java)"
+			],
+			[
+				"log",
+				"logout_moment"
+			],
+			[
+				"lo",
+				"logout_notification"
+			],
+			[
+				"no",
+				"notificated_to"
+			],
+			[
+				"fo",
+				"form\tTag"
+			],
+			[
+				"li",
+				"link\tTag"
+			],
+			[
+				"p",
+				"php\t<?php … ?>"
+			],
+			[
+				"s",
+				"script\tTag"
+			],
+			[
+				"di",
+				"div\tTag"
+			],
+			[
+				"pa",
+				"pagination \tBootstrap 3 Class"
+			],
+			[
+				"ta",
+				"table-responsive \tBootstrap 3 Class"
+			],
+			[
+				"table",
+				"table-condensed \tBootstrap 3 Class"
+			],
+			[
+				"bo",
+				"bootstrap.min.css"
+			],
+			[
+				"boot",
+				"bootstrap-3.3.7-dist"
+			],
+			[
+				"th",
+				"thead\tTag"
+			],
+			[
+				"me",
+				"meta\tTag"
+			],
+			[
+				"filet",
+				"filter_product_id"
+			],
+			[
+				"form",
+				"form_validation"
+			],
+			[
+				"pub",
+				"public_url"
+			],
+			[
+				"num",
+				"num_rows"
+			],
+			[
+				"get_list",
+				"get_list_set_input"
+			],
+			[
+				"adm",
+				"admin_module\t(index.php)"
+			],
+			[
+				"Tr",
+				"TRUE"
+			],
+			[
+				"is",
+				"is_numeric"
+			],
+			[
+				"admin",
+				"admin_model"
+			],
+			[
+				"MY",
+				"MY_Controller\t(Admin_model.php)"
+			],
+			[
+				"MY_",
+				"MY_Controller\t(MY_Controller.php)"
+			],
+			[
+				"bas",
+				"base_url\t(config.php)"
+			],
+			[
+				"back",
+				"back_to_top"
+			],
+			[
+				"public",
+				"public_url\t(common_helper.php)"
+			],
+			[
+				"gu",
+				"guessed_it"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"margi",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-weight"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"word",
+				"word-spacing"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"sub",
+				"submit"
+			],
+			[
+				"em",
+				"email-address"
+			],
+			[
+				"text",
+				"text-transform"
+			],
+			[
+				"op",
+				"option\tTag"
+			],
+			[
+				"line",
+				"line-through"
+			],
+			[
+				"tex",
+				"text-decoration"
+			],
+			[
+				"padd",
+				"padding-left"
+			],
+			[
+				"border-r",
+				"border-radius"
+			],
+			[
+				"inle",
+				"inline-block"
+			],
+			[
+				"padding",
+				"padding-left"
+			],
+			[
+				"wor",
+				"word-wrap"
+			],
+			[
+				"font-",
+				"font-family"
+			],
+			[
+				"justi",
+				"justify-all"
+			],
+			[
+				"le",
+				"letter-spacing"
+			],
+			[
+				"wo",
+				"word-spacing"
+			],
+			[
+				"box",
+				"box-shadow"
+			],
+			[
+				"your",
+				"your-email"
+			],
+			[
+				"d",
+				"display"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ine",
+				"inline-block"
+			],
+			[
+				"at",
+				"auto"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"i",
+				"img\tTag"
+			],
+			[
+				"lin",
+				"line-height"
+			],
+			[
+				"list-style",
+				"list-style-type"
+			],
+			[
+				"inli",
+				"inline-block"
+			],
+			[
+				"ma",
+				"margin"
+			],
+			[
+				"fl",
+				"float"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "/H/hoc hanh/tai/Lap trinh web/Học JavaScript/Testjs/splice.html",
+			"settings":
+			{
+				"buffer_size": 181,
+				"encoding": "UTF-8",
+				"line_ending": "Windows"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					""
+				],
+				[
+					"Packages/C++/C++ Single File.sublime-build",
+					"Run"
+				],
+				[
+					"Packages/User/myC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/myC.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/C++/C++ Single File.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/JavaC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/JavaC.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/JavaC.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/myC++.sublime-build",
+					""
+				],
+				[
+					"Packages/User/myC++.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/myC++.sublime-build",
+				"Run"
+			]
+		],
+		[
+			[
+				[
+					"Packages/User/myC.sublime-build",
+					""
+				],
+				[
+					"Packages/User/myC.sublime-build",
+					"Run"
+				]
+			],
+			[
+				"Packages/User/myC.sublime-build",
+				"Run"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 357.0,
+		"last_filter": "prv",
+		"selected_items":
+		[
+			[
+				"prv",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"material",
+				"Material Theme: Configuration"
+			],
+			[
+				"Package Control: ",
+				"Package Control: Install Package"
+			],
+			[
+				"in",
+				"Package Control: Install Package"
+			],
+			[
+				"install",
+				"Package Control: Install Package"
+			],
+			[
+				"pvr",
+				"PackageResourceViewer: Open Resource"
+			],
+			[
+				"Package Control: i",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: in",
+				"Package Control: Install Package"
+			],
+			[
+				"Package Control: r",
+				"Package Control: Remove Package"
+			]
+		],
+		"width": 558.0
+	},
+	"console":
+	{
+		"height": 120.0,
+		"history":
+		[
+			"import urllib.request,os,hashlib; h = 'df21e130d211cfc94d9b0905775a7c0f' + '1e3d39e33b79698005270310898eea76'; pf = 'Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); by = urllib.request.urlopen( 'http://packagecontrol.io/' + pf.replace(' ', '%20')).read(); dh = hashlib.sha256(by).hexdigest(); print('Error validating download (got %s instead of %s), please try manual install' % (dh, h)) if dh != h else open(os.path.join( ipp, pf), 'wb' ).write(by)",
+			"import urllib.request,os; pf = ‘Package Control.sublime-package'; ipp = sublime.installed_packages_path(); urllib.request.install_opener( urllib.request.build_opener( urllib.request.ProxyHandler()) ); open(os.path.join(ipp, pf), ‘wb’).write(urllib.request.urlopen( ‘<a href=\"http://sublime.wbond.net/&amp;#8217\" rel=\"nofollow\">http://sublime.wbond.net/&amp;#8217</a>; + pf.replace(‘ ‘,’%20′)).read())",
+			"MinBan",
+			"EA7E-812479",
+			"EA7E-855605",
+			"813A03DD"
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/H/hoc hanh/tai/Lap trinh web/Học JavaScript/Testjs"
+	],
+	"file_history":
+	[
+		"/G/wamp64/www/messenger/usermysql.php",
+		"/G/wamp64/www/messenger/send_request_close_chat.php",
+		"/G/wamp64/www/messenger/get_close_tab_notification.php",
+		"/G/wamp64/www/messenger/js/private_tab.js",
+		"/G/wamp64/www/messenger/close_tab_notification.php",
+		"/G/wamp64/www/messenger/js/sendmsg_error.js",
+		"/G/wamp64/www/messenger/js/request_close_chat.js",
+		"/G/wamp64/www/messenger/index.php",
+		"/G/wamp64/www/messenger/get_msg.php",
+		"/G/wamp64/www/messenger/css/style.css",
+		"/G/wamp64/www/messenger/show_friend_list.php",
+		"/G/wamp64/www/messenger/js/show_friend_list.js",
+		"/G/wamp64/www/messenger/includes/general.php",
+		"/G/wamp64/www/messenger/sendPrivate.php",
+		"/G/wamp64/www/messenger/sendmsg.php",
+		"/G/wamp64/www/messenger/message_notifi.php",
+		"/G/wamp64/www/website/public/site/css/product.css",
+		"/G/wamp64/www/website/application/views/site/content.php",
+		"/G/wamp64/www/website/application/core/MY_Model.php",
+		"/G/wamp64/www/website/application/views/site/slide.php",
+		"/G/wamp64/www/website/application/views/site/layout.php",
+		"/G/wamp64/www/website/application/models/Slide_model.php",
+		"/G/wamp64/www/website/application/controllers/admin/Home.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong15/DailyAdviceClient.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong15/DailyAdviceServer.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong15/SimpleChatClientA.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong15/ThreadTester.java",
+		"/G/wamp64/www/messenger/register.php",
+		"/G/wamp64/www/messenger/logout.php",
+		"/G/wamp64/www/messenger/privateLog.php",
+		"/G/wamp64/www/demo_livechat/application/models/muser.php",
+		"/G/wamp64/www/demo_livechat/application/views/chat/demo_chat.php",
+		"/G/wamp64/www/demo_livechat/public/css/demo_chat.css",
+		"/G/wamp64/www/demo_livechat/application/models/demo_mchat.php",
+		"/G/wamp64/www/demo_livechat/application/controllers/demo_chat.php",
+		"/G/wamp64/www/demo_livechat/application/controllers/user.php",
+		"/G/wamp64/www/demo_livechat/public/js/demo_chat.js",
+		"/G/wamp64/www/demo_livechat/public/js/config.js",
+		"/G/wamp64/www/demo_livechat/application/views/user.php",
+		"/G/wamp64/www/demo_livechat/application/controllers/welcome.php",
+		"/G/wamp64/www/demo_livechat/application/config/autoload.php",
+		"/G/wamp64/www/demo_livechat/application/config/database.php",
+		"/G/wamp64/www/demo_livechat/application/config/config.php",
+		"/G/wamp64/www/demo_livechat/system/core/Common.php",
+		"/G/wamp64/www/demo_livechat/demo_chat.sql",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Mạng máy tính/calavikevin/demo_livechat/index.php",
+		"/G/wamp64/www/website/application/core/MY_Controller.php",
+		"/G/wamp64/www/website/application/controllers/Home.php",
+		"/G/wamp64/www/website/application/views/site/left.php",
+		"/G/wamp64/www/website/application/views/site/home/index.php",
+		"/G/wamp64/www/website/application/controllers/admin/Admin.php",
+		"/G/wamp64/www/website/application/views/admin/left.php",
+		"/G/wamp64/www/website/application/views/admin/main.php",
+		"/G/wamp64/www/website/application/views/admin/head.php",
+		"/G/wamp64/www/website/application/views/admin/footer.php",
+		"/G/wamp64/www/website/application/views/admin/header.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/DungeonTest.java",
+		"/G/wamp64/www/messenger/includes/footer.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/BeatBox.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/Checkbox.ser",
+		"/G/wamp64/www/website/application/controllers/admin/Slide.php",
+		"/G/wamp64/www/website/application/views/admin/slide/index.php",
+		"/G/wamp64/www/website/application/controllers/admin/Product.php",
+		"/G/wamp64/www/website/application/views/admin/slide/edit.php",
+		"/G/wamp64/www/website/application/views/admin/slide/add.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/GameSaverTest.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/Pond.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/Box.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/WriteAFile.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/QuizCardPlayer.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/QuizCardBuilder.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/chap13/BeatBox.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/embe.txt",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/Foo.txt",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong14/foo.ser",
+		"/G/wamp64/www/website/application/views/admin/slide/head.php",
+		"/G/wamp64/www/website/application/models/News_model.php",
+		"/G/wamp64/www/website/application/controllers/admin/News.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/TextArea1.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/Button1.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong13/Panel1.java",
+		"/G/wamp64/www/messenger/join.php",
+		"/G/wamp64/www/messenger/js/add_friend.js",
+		"/G/wamp64/www/messenger/decline_friend.php",
+		"/G/wamp64/www/messenger/accept_friend.php",
+		"/G/wamp64/www/messenger/js/decline.js",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/MiniMiniMusicApp.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/MiniMusicPlayer2.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/MiniMusicPlayer3.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/SimpleGui1B.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/InnerButton.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/SimpleGui1C.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/SimpleGui3C.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/SimpleAnimation.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/Animate.java",
+		"/G/wamp64/www/website/application/views/admin/news/index.php",
+		"/G/wamp64/www/website/application/views/admin/news/edit.php",
+		"/G/wamp64/www/website/application/helpers/common_helper.php",
+		"/G/wamp64/www/website/public/js/custom_admin.js",
+		"/G/wamp64/www/website/application/views/admin/product/edit.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/MiniMusicPlayer1.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/TestInner.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong12/TwoButtons.java",
+		"/C/Users/truon/Documents/NetBeansProjects/Calculation_app/dist/Calculation_app.jar",
+		"/G/wamp64/www/messenger/js/message_notifi.js",
+		"/G/wamp64/www/website/application/views/admin/news/head.php",
+		"/G/wamp64/www/website/application/views/admin/news/add.php",
+		"/G/wamp64/www/website/application/libraries/Upload_library.php",
+		"/G/wamp64/www/website/application/helpers/MY_date_helper.php",
+		"/G/wamp64/www/website/application/config/autoload.php",
+		"/G/wamp64/www/website/application/config/config.php",
+		"/G/wamp64/www/messenger/msglog.php",
+		"/G/wamp64/www/messenger/private/embe1_tai.html",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/ExtestDrive.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/MiniMusicCmdLine.java",
+		"/G/wamp64/www/website/application/views/admin/product/index.php",
+		"/G/wamp64/www/website/application/views/admin/home/index.php",
+		"/G/wamp64/www/website/application/views/admin/news",
+		"/G/wamp64/www/website/application/models/Product_model.php",
+		"/G/wamp64/www/website/application/models/Admin_model.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/MusicTest1.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/InstrumentList.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/chap11/MiniMiniMusicCmdLine.java",
+		"/G/wamp64/www/messenger/includes/header.php",
+		"/G/wamp64/www/messenger/add_friend.php",
+		"/G/wamp64/www/messenger/get_notification.php",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/Washer.java",
+		"/H/hoc hanh/tai/CNTT/HocKy2/Lập trình hướng đối tượng/Code_Java/Chuong11/TestExceptions.java"
+	],
+	"find":
+	{
+		"height": 26.0
+	},
+	"find_in_files":
+	{
+		"height": 90.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"folders":
+	[
+		{
+			"path": "H:\\hoc hanh\\tai\\Lap trinh web\\Học JavaScript\\Testjs"
+		}
+	],
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "/H/hoc hanh/tai/Lap trinh web/Học JavaScript/Testjs/splice.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 181,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								150,
+								150
+							]
+						],
+						"settings":
+						{
+							"auto_complete": false,
+							"bracket_highlighter.busy": false,
+							"bracket_highlighter.locations":
+							{
+								"close":
+								{
+									"1":
+									[
+										152,
+										153
+									]
+								},
+								"icon":
+								{
+									"1":
+									[
+										"Packages/BracketHighlighter/icons/round_bracket.png",
+										"brackethighlighter.default"
+									]
+								},
+								"open":
+								{
+									"1":
+									[
+										150,
+										151
+									]
+								},
+								"unmatched":
+								{
+								}
+							},
+							"bracket_highlighter.regions":
+							[
+								"bh_c_define",
+								"bh_c_define_center",
+								"bh_c_define_open",
+								"bh_c_define_close",
+								"bh_c_define_content",
+								"bh_angle",
+								"bh_angle_center",
+								"bh_angle_open",
+								"bh_angle_close",
+								"bh_angle_content",
+								"bh_unmatched",
+								"bh_unmatched_center",
+								"bh_unmatched_open",
+								"bh_unmatched_close",
+								"bh_unmatched_content",
+								"bh_round",
+								"bh_round_center",
+								"bh_round_open",
+								"bh_round_close",
+								"bh_round_content",
+								"bh_default",
+								"bh_default_center",
+								"bh_default_open",
+								"bh_default_close",
+								"bh_default_content",
+								"bh_tag",
+								"bh_tag_center",
+								"bh_tag_open",
+								"bh_tag_close",
+								"bh_tag_content",
+								"bh_double_quote",
+								"bh_double_quote_center",
+								"bh_double_quote_open",
+								"bh_double_quote_close",
+								"bh_double_quote_content",
+								"bh_single_quote",
+								"bh_single_quote_center",
+								"bh_single_quote_open",
+								"bh_single_quote_close",
+								"bh_single_quote_content",
+								"bh_curly",
+								"bh_curly_center",
+								"bh_curly_open",
+								"bh_curly_close",
+								"bh_curly_content",
+								"bh_square",
+								"bh_square_center",
+								"bh_square_open",
+								"bh_square_close",
+								"bh_square_content",
+								"bh_regex",
+								"bh_regex_center",
+								"bh_regex_open",
+								"bh_regex_close",
+								"bh_regex_content"
+							],
+							"open_with_edit": true,
+							"syntax": "Packages/PHP/PHP.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 70.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 175.0
+	},
+	"output.find_results":
+	{
+		"height": 100.0
+	},
+	"output.xdebug":
+	{
+		"height": 0.0
+	},
+	"pinned_build_system": "Packages/Java/JavaC.sublime-build",
+	"project": "",
+	"replace":
+	{
+		"height": 48.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control Messages"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 214.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

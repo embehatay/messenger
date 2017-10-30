@@ -13,20 +13,18 @@
 	});
 });*/
 
-//Gửi thông báo về cho user trong mảng notificated_to
-function get_notification() {
+//Khi 1 user log out thì thông báo cho những thằng đang chat cùng biết
+$("#logout").click(function() {
 	$.ajax({
-		url: "get_notification.php",
+		url: "logout.php",
 		type: "post",
 		dataType: "text",
 		data: {
-
+			notificated_to : notificated_to
 		},
 		success : function(result) {
-			if(result)
-				$("#notification").html(result);
+			
 		}
 	});
-}
+});
 
-setInterval(get_notification, 6000);
