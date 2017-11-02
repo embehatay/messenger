@@ -46,7 +46,12 @@ include('includes/general.php');
 		      	} else if(array_search($row['uvon'], $waiting_list) !== false) {
 		      		$usron .= '<li><p id="' . $row['uvon'] . '" class="private_msg"><i>'.$row['uvon']. '</i></p><span class="waiting"><i class="fa fa-clock-o" aria-hidden="true"></i>  Waiting...</span></li>';
 		      	} else if(array_search($row['uvon'], $request_list) !== false) {
-		      		$usron .= '<li><p id="' . $row['uvon'] . '" class="private_msg"><i>'.$row['uvon']. '</i></p><span class="decline"><i class="fa fa-user-times" aria-hidden="true"></i>  Decline</span><span class="accept"><i class="fa fa-check" aria-hidden="true"></i>  Accept</span></li>';
+		      		$usron .= '<li>
+		      			<p id="' . $row['uvon'] . '" class="private_msg"><i>'.$row['uvon']. '</i></p>
+		      			<p style="display: none">'. $row['uvon'] .'</p>
+		      			<span class="decline"><i class="fa fa-user-times" aria-hidden="true"></i>  Decline</span>
+		      			<span class="accept"><i class="fa fa-check" aria-hidden="true"></i>  Accept</span>
+		      		</li>';
 		      	} else {
 		      		$usron .= '<li><p id="' . $row['uvon'] . '" class="private_msg"><i>'.$row['uvon']. '</i></p><span class="add_friend"><i class="fa fa-user-plus" aria-hidden="true"></i>  Add</span></li>';
 		      	}

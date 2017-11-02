@@ -133,6 +133,7 @@ function create_tab_chat(chatter, private_chat) {
 	$("#tab_container").append(el);
 	$("#tab_container").append(le1);
 	le3.focus();
+	// khi mới mở tab chat thì load file sử dụng ra trước, lợi dụng cái này để xóa tên người nhận trong CSDL trước
 	loadData(private_chat);
 	le3.keypress(function(event) {
 		var keycode = (event.keyCode ? event.keyCode : event.which);
@@ -144,6 +145,13 @@ function create_tab_chat(chatter, private_chat) {
 			    var y = today.getFullYear();
 				var h = today.getHours();
 			    var m = today.getMinutes();
+			    if(d < 10)
+			    	d = '0' + d;
+			    if(mo < 10) {
+			    	mo = '0' + mo;
+			    }
+			    if(h < 10)
+			    	h = '0' + h;
 			    if(m < 10) {
 			    	m = '0' + m;
 			    }
@@ -156,7 +164,7 @@ function create_tab_chat(chatter, private_chat) {
 			}
 		}
 	});
-	var load_message = setInterval(function() {get_message(private_chat, chatter);}, 1000);
+	// var load_message = setInterval(function() {get_message(private_chat, chatter);}, 1000);
 	var load_close_tab_notification = setInterval(function() {get_close_tab_notification(private_chat, del_close_notif_first);}, 5000);
 	var load_request_close_notification = setInterval(function() {get_request_close_notification(private_chat, del_close_notif_first, chatter);}, 5000);
 	// Quăng interval vô đối tượng này để về sau tắt

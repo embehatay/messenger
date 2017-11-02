@@ -10,13 +10,14 @@
 		// Hiển thị trò chuyện
 		echo '
 			<div id="main">
-				<div class="main-chat">		
+				<div class="main-chat">
+					<h3 style="color: red; text-align: center; border-bottom: 1px solid red; height: 35px; padding-top: 8px">Your Notifications</h3><ul id="show_notification"></ul>		
 				</div><!-- div.main-chat -->
-				<div class="box-chat">
+				<!--<div class="box-chat">
 					<form method="POST" id="formSendMsg" onsubmit="return false;">
 						<input type="text" placeholder="Nhập nội dung tin nhắn ...">
-					</form><!-- form#formSendMsg -->
-				</div><!-- div.box-chat -->
+					</form> form#formSendMsg 
+				</div> div.box-chat -->
 			</div>
 			<div id="private">
 				<ul id="tabs"></ul>

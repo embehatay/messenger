@@ -5,10 +5,11 @@
 	if($r1->num_rows == 1) {
 		$row = $r1->fetch_assoc();
 		if($row['receivers']) {
-			echo $row['sendner'];
 			$receivers = json_decode($row['receivers']);
-			if(($key = array_search($user, $receivers)) !== false)
+			if(($key = array_search($user, $receivers)) !== false) {
+				echo $row['sendner'];
 				unset($receivers[$key]);
+			}
 			if($receivers) {
 				$receivers = array_values($receivers);
 				$json_notification_to = json_encode($receivers);

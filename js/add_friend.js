@@ -49,9 +49,9 @@ $(document).on("click", ".add_friend", function() {
 });
 
 $(document).on("click", ".accept", function() {
-	accept_friend($(this).prev().prev().attr("id"));
+	accept_friend($(this).prev().prev().text());
 });
 
 $(document).on("click", ".decline", function() {
-	decline_friend($(this).prev().attr("id"));
+	decline_friend($(this).prev().text());
 });

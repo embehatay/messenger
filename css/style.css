@@ -215,3 +215,15 @@ ul#tabs li.active {
     width: 100%;
     background: #fff;
 }
+
+/*  Style cho khu vực hiển thị thông báo  */
+ul#show_notification {
+    margin-top: 1%;
+}
+
+ul#show_notification li {
+    border: 1px solid red;
+    margin-bottom: 1%;
+    height: 48px;
+    padding: 4px;
+}

@@ -96,6 +96,7 @@
 	*
 	*/
 	$private_chat = (isset($_POST['private_chat'])) ? $_POST['private_chat'] : '';
+	$cn->query("UPDATE messages SET not_received = '' WHERE file_name = '$private_chat'");
 
 	if(file_exists("private/". $private_chat .".html") && filesize("private/". $private_chat .".html") > 0) {
 		$handle = fopen("private/". $private_chat .".html", "r");

@@ -9,9 +9,14 @@ function show_friend_list() {
 
 		},
 		success : function(result) {
-			if(result && result != previous_friend_list) {
-				$("#show_friend_list").html(result);
-				previous_friend_list = result;
+			if(result) {
+				if(result != previous_friend_list) {
+					$("#show_friend_list").html(result);
+					previous_friend_list = result;					
+				}
+			} else {
+				$("#show_friend_list").html('');
+				previous_friend_list = '';
 			}
 		}
 	});
