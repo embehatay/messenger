@@ -62,7 +62,7 @@ ul li {list-style: none;}
 
 /* Box_private */
 .box_private {position: fixed; bottom: 0; width: 50%; border-top: 1px solid #e5e5e5; background-color: white;}
-.form_private input {padding: 10px; font-size: 15px; color: #555; border: 0; width: 100%;}
+.form_private input {padding: 10px; font-size: 15px; color: #555; border: 1px solid blue; width: 100%;}
 /* Vùng hiển thị user online và bạn bè */
 #show_friend_and_user {
     /*float: right;*/
@@ -224,6 +224,15 @@ ul#show_notification {
 ul#show_notification li {
     border: 1px solid red;
     margin-bottom: 1%;
-    height: 48px;
+    height: auto;
     padding: 4px;
+    cursor: pointer;
+}
+
+ul#show_notification li.users_request {
+    height: 55px;
+}
+
+ul#show_notification li span {
+    color: white;
 }

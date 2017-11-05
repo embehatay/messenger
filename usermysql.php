@@ -2,7 +2,7 @@
 include('includes/general.php');
 	if(isset($user) && !empty($user)) {
 		$dt = time();                                 
-		$timeon = 1800;            
+		$timeon = 8;            
 		$nrvst = 0;                                     
 		$nrusr = 0;                                    
 		$usron = '';       

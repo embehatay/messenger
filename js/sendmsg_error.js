@@ -164,7 +164,7 @@ function create_tab_chat(chatter, private_chat) {
 			}
 		}
 	});
-	// var load_message = setInterval(function() {get_message(private_chat, chatter);}, 1000);
+	var load_message = setInterval(function() {get_message(private_chat, chatter);}, 1000);
 	var load_close_tab_notification = setInterval(function() {get_close_tab_notification(private_chat, del_close_notif_first);}, 5000);
 	var load_request_close_notification = setInterval(function() {get_request_close_notification(private_chat, del_close_notif_first, chatter);}, 5000);
 	// Quăng interval vô đối tượng này để về sau tắt
@@ -195,6 +195,20 @@ $(document).on("click", ".private_msg", function() {
 // Cái này để xử lý phần chat solo khi click từ vùng friend list
 $(document).on("click", ".show_friends", function() {
 	var chatter = $(this).children().html();
+	var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
+	if(!document.getElementById(private_chat)) {
+		if(del_close_notif_first == 1) {
+			get_close_tab_notification(private_chat, del_close_notif_first);
+			get_request_close_notification(private_chat, del_close_notif_first, chatter);
+			del_close_notif_first = 0;
+		}
+		create_tab_chat(chatter, private_chat);
+	}
+});
+
+// Cái này để để bật tab chat lên khi click từ vùng thông báo tin nhắn mới
+$(document).on("click", ".list_message_notifi", function() {
+	var chatter = $(this).children().first().html();
 	var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 	if(!document.getElementById(private_chat)) {
 		if(del_close_notif_first == 1) {

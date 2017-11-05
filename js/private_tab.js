@@ -8,6 +8,7 @@ $(document).on("click", "ul#tabs li", function() {
     var activeTab = $(this).attr("rel");
     $("#"+activeTab).show();
     $("#form_"+activeTab).show();
+    $("#form_"+activeTab+" input").focus();
 });
 
 // Xử lý khi user ấn vào tắt tab chat

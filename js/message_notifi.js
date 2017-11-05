@@ -1,16 +1,24 @@
 var previous_message_notifi = '';
 var file_name_message_notifi = '';
 function message_notifi() {
+	if(notificated_to.toString())
+		var bien_can_truyen = notificated_to
+	else
+		var bien_can_truyen = 1;
 	$.ajax({
 		url: 'message_notifi.php',
-		type: 'post',
+		type: "post",
+		dataType: "text",
 		data: {
-
+			notificated_to : bien_can_truyen
 		},
 		success : function(result) {
 			if(result){
 				if(result != previous_message_notifi) {
-					var myData = $.parseJSON(result);
+					$('.list_message_notifi').remove();
+					$('#show_notification').append(result);
+					previous_message_notifi = result;
+					/*var myData = $.parseJSON(result);
 					file_name_message_notifi = myData.file_name;
 					previous_message_notifi = result;
 					var cover_tag = '<li id="message_notifi_' + myData.file_name + '"></li>';
@@ -20,13 +28,15 @@ function message_notifi() {
 						$('#message_notifi_' + file_name_message_notifi).html(notification);
 					}
 					else
-						$('#message_notifi_' + file_name_message_notifi).html(notification);
+						$('#message_notifi_' + file_name_message_notifi).html(notification);*/
 				}
 			} else {
-				$('#message_notifi_' + file_name_message_notifi).remove();
+				$('.list_message_notifi').remove();
+				previous_message_notifi = '';
+				/*$('#message_notifi_' + file_name_message_notifi).remove();
 				previous_message_notifi = '';
 				file_name_message_notifi = '';
-				date_sent = '';
+				date_sent = '';*/
 			}
 		}
 	});
