@@ -67,7 +67,7 @@
 	*
 	*/
 	if($body_msg != '') {
-		$query_send_msg = "INSERT INTO messages (file_name, body, user_from, date_sent, not_received) VALUES ('$private_chat', '$body_msg', '$user', '$date_current', '$not_received') ON DUPLICATE KEY UPDATE body = '$body_msg', user_from = '$user', date_sent = '$date_current', not_received = '$not_received' ";
+		$query_send_msg = "INSERT INTO messages (file_name, body, user_from, date_sent, not_received) VALUES ('$private_chat', '$body_msg', '$user', '$date_current', '$not_received') ON DUPLICATE KEY UPDATE body = '$body_msg', user_from = '$user', date_sent = '$date_current', not_received = '$not_received', da_xem = 0";
 		mysqli_query($cn, $query_send_msg);
 		$day_sent = substr($date_current, 8, 2); // Ngày gửi
 		$month_sent = substr($date_current, 5, 2); // Tháng gửi

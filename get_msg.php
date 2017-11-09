@@ -27,6 +27,9 @@
 					</div>
 				';
 			}
+		} else {
+			if($user == $row['user_from'] && $row['da_xem'] == 1)
+				echo 'daxem';
 		}		
 	}
 ?>

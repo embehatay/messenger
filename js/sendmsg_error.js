@@ -44,10 +44,57 @@ function get_message(private_chat, chatter) {
 			chatter: chatter
 		}, success : function(result) {
 			if(result) {
-				$("#" + private_chat).append(result);
-				var wtf = $('#' + private_chat);
-				var height = wtf[0].scrollHeight;
-				wtf.scrollTop(height);
+				if(result != 'daxem') {
+					$("#da_xem").remove();
+					if($("#effect_" + private_chat).attr('class') != 'active') {
+						// var array = ["red", "blue", "yellow"];
+						var array = ["white", "red"];
+						var counter = 0;
+						var nextColor;
+
+						function  bgchange() {
+						    counter = (counter + 1) % array.length;
+						    nextColor = array[counter];
+
+						    $("#effect_" + private_chat).css("background-color", nextColor);
+						    $("#effect_" + private_chat).click(function() {
+						    	$.ajax({
+									url : 'message_has_seen.php',
+									type : 'post',
+									data : {
+										private_chat : private_chat
+									},
+									success : function() {}
+								});
+						    	$("#effect_" + private_chat).css("background-color", 'white');
+						    	clearInterval(change_color);
+						    });
+						}
+						var change_color = setInterval(bgchange, 1000);
+					} else {
+						$.ajax( {
+							url : 'message_has_seen.php',
+							type : 'post',
+							data : {
+								private_chat : private_chat
+							},
+							success : function() {}
+						});
+					}
+					$("#" + private_chat).append(result);
+					var wtf = $('#' + private_chat);
+					var height = wtf[0].scrollHeight;
+					wtf.scrollTop(height);
+				}
+				else {
+					var seen_div = '<p id="da_xem" style="float: right; color: green">Đã xem</p>';
+					if(!document.getElementById('da_xem')) {
+						$("#" + private_chat).append(seen_div);	
+						var wtf = $('#' + private_chat);
+						var height = wtf[0].scrollHeight;
+						wtf.scrollTop(height);				
+					}
+				}
 			}
 		}
 	});
@@ -119,7 +166,7 @@ function create_tab_chat(chatter, private_chat) {
     $(".private_chat").hide();
     $(".box_private").hide();
 	//Tạo tiêu đề chat
-	var header1 = $('<li rel="'+private_chat+'" class="active"><strong>'+ chatter +'</strong><span id="request_button_'+ private_chat +'" class="request_close_chat"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span><span class="close_private"><i class="fa fa-window-close" aria-hidden="true"></i></span></li>');
+	var header1 = $('<li id="effect_'+private_chat+'"  rel="'+private_chat+'" class="active"><strong>'+ chatter +'</strong><span id="request_button_'+ private_chat +'" class="request_close_chat"><i class="fa fa-exclamation-triangle" aria-hidden="true"></i></span><span class="close_private"><i class="fa fa-window-close" aria-hidden="true"></i></span></li>');
 	//Tạo form nhap tin nhan
 	var form_id = "form_" + private_chat;
 	var le1 = $('<div id='+form_id+' class="box_private"></div>');
@@ -157,6 +204,7 @@ function create_tab_chat(chatter, private_chat) {
 			    }
 				var user_message = '<div class="msg-user"><p>' + le3.val() + '</p><div class="info-msg-user">Bạn - '+ d + '/'+ mo + '/'+ y +' lúc ' + h + ':'+ m +'</div></div>';
 				$("#" + private_chat).append(user_message);
+				$("#da_xem").remove();
 				var wtf = $('#' + private_chat);
 				var height = wtf[0].scrollHeight;
 				wtf.scrollTop(height);
@@ -242,7 +290,6 @@ function get_logout_notification() {
 		}
 	});
 }
-
 setInterval(get_logout_notification, 4000);
 
 // Khi 1 user tắt tab chat thì thông báo cho thằng đang chat cùng nó biết

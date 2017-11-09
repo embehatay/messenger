@@ -18,7 +18,6 @@ $("#logout").click(function() {
 	$.ajax({
 		url: "logout.php",
 		type: "post",
-		dataType: "text",
 		data: {
 			notificated_to : notificated_to
 		},

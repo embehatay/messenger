@@ -14,10 +14,14 @@ function message_notifi() {
 		},
 		success : function(result) {
 			if(result){
-				if(result != previous_message_notifi) {
+				var final_result = $.parseJSON(result);
+				if(final_result.user_from) {
+					$("#" + final_result.user_from).trigger('click');
+				}
+				else if(final_result.list_message_notifi != previous_message_notifi) {
 					$('.list_message_notifi').remove();
-					$('#show_notification').append(result);
-					previous_message_notifi = result;
+					$('#show_notification').append(final_result.list_message_notifi);
+					previous_message_notifi = final_result.list_message_notifi;
 					/*var myData = $.parseJSON(result);
 					file_name_message_notifi = myData.file_name;
 					previous_message_notifi = result;

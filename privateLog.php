@@ -96,7 +96,11 @@
 	*
 	*/
 	$private_chat = (isset($_POST['private_chat'])) ? $_POST['private_chat'] : '';
-	$cn->query("UPDATE messages SET not_received = '' WHERE file_name = '$private_chat'");
+	// Tiện thể update cái trạng thái đã xem là 1
+	$cn->query("UPDATE messages SET not_received = '', da_xem = 1 WHERE file_name = '$private_chat'");
+	// Khi click tạo tab chat thì update cho cột users_chatting lên +1 nghĩa là đang có 1 thằng chat
+	// Nếu users_chatting bằng 2 tức là có 2 thằng chat
+	// $cn->query("UPDATE messages SET users_chatting = users_chatting + 1 WHERE file_name = '$private_chat'");
 
 	if(file_exists("private/". $private_chat .".html") && filesize("private/". $private_chat .".html") > 0) {
 		$handle = fopen("private/". $private_chat .".html", "r");
