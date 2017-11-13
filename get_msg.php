@@ -1,6 +1,7 @@
 <?php
 	include('includes/general.php');
 	$private_chat = $_POST['private_chat'];
+	$user_text = explode('_', $private_chat);
 	$user_session = $_POST['user_session'];
 	$query_get_msg = "SELECT * FROM messages WHERE file_name = '$private_chat'";
 	$result = $cn->query($query_get_msg);
@@ -28,8 +29,21 @@
 				';
 			}
 		} else {
+			$text_status = array();
 			if($user == $row['user_from'] && $row['da_xem'] == 1)
-				echo 'daxem';
+				$text_status['da_xem'] = 'daxem';
+			if($user == $user_text[0]) {
+				if($row['user2_texting_status'] == 1)
+					$text_status['status'] = 'texting';
+				else
+					$text_status['status'] = 'texted';
+			} else {
+				if($row['user1_texting_status'] == 1)
+					$text_status['status'] = 'texting';
+				else
+					$text_status['status'] = 'texted';
+			}
+			echo json_encode($text_status);
 		}		
 	}
 ?>

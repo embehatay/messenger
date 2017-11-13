@@ -17,6 +17,8 @@ function message_notifi() {
 				var final_result = $.parseJSON(result);
 				if(final_result.user_from) {
 					$("#" + final_result.user_from).trigger('click');
+					var mySound = new sound("sound/Facebook_Message_Sound.mp3");
+				    mySound.play();
 				}
 				else if(final_result.list_message_notifi != previous_message_notifi) {
 					$('.list_message_notifi').remove();

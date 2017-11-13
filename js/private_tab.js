@@ -38,7 +38,7 @@ $(document).on("click", ".close_private", function() {
 	clearInterval(assoc_message[close_tab_notif]);
 	delete assoc_message.close_tab_notif;
 	var request_close_notif = 'request_close' + file_name_using;
-	clearInterval(assoc_message[close_tab_notif]);
+	clearInterval(assoc_message[request_close_notif]);
 	delete assoc_message.request_close_notif;
 
 	// Xóa tab chat khỏi DOM

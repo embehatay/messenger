@@ -1,3 +1,35 @@
+// Hàm tiện ích kiểm tra 1 chuỗi có phải chuỗi json ko?
+function isJson(str) {
+    try {
+        $.parseJSON(str);
+    } catch (e) {
+        return false;
+    }
+    return true;
+}
+
+// Hàm tiện ích kiểm tra có phải đối tượng ko?
+function isObject(val) {
+    if (val === null) { return false;}
+    return ( (typeof val === 'function') || (typeof val === 'object') );
+}
+
+// Thêm chút tiếng động cho vui
+function sound(src) {
+    this.sound = document.createElement("audio");
+    this.sound.src = src;
+    this.sound.setAttribute("preload", "auto");
+    this.sound.setAttribute("controls", "none");
+    this.sound.style.display = "none";
+    document.body.appendChild(this.sound);
+    this.play = function(){
+        this.sound.play();
+    }
+    this.stop = function(){
+        this.sound.pause();
+    }
+} 
+
 // Hàm gửi tin nhắn
 function sendMsg() {
 	// Khai ba1oca1c biến trong form
@@ -28,7 +60,7 @@ function sendPrivate(message, private_chat, le3, chatter) {
 			private_chat: private_chat,
 			user_session: user_session,
 			chatter: chatter
-		}, success : function() {
+		}, success : function(result) {
 			le3.val('');
 		}
 	});
@@ -44,14 +76,16 @@ function get_message(private_chat, chatter) {
 			chatter: chatter
 		}, success : function(result) {
 			if(result) {
-				if(result != 'daxem') {
+				if(isJson(result) == false) {
+					// alert(result);
 					$("#da_xem").remove();
 					if($("#effect_" + private_chat).attr('class') != 'active') {
 						// var array = ["red", "blue", "yellow"];
 						var array = ["white", "red"];
 						var counter = 0;
 						var nextColor;
-
+						var mySound = new sound("sound/Facebook_Message_Sound.mp3");
+					    mySound.play();
 						function  bgchange() {
 						    counter = (counter + 1) % array.length;
 						    nextColor = array[counter];
@@ -81,18 +115,36 @@ function get_message(private_chat, chatter) {
 							success : function() {}
 						});
 					}
+					$("#text_status").remove();
 					$("#" + private_chat).append(result);
 					var wtf = $('#' + private_chat);
 					var height = wtf[0].scrollHeight;
 					wtf.scrollTop(height);
-				}
-				else {
-					var seen_div = '<p id="da_xem" style="float: right; color: green">Đã xem</p>';
-					if(!document.getElementById('da_xem')) {
-						$("#" + private_chat).append(seen_div);	
-						var wtf = $('#' + private_chat);
-						var height = wtf[0].scrollHeight;
-						wtf.scrollTop(height);				
+				} else {
+					var info = $.parseJSON(result);
+					// Xử lý phần hiển thị thông tin trong khung chat là "đã xem"
+					if(info['da_xem']) {
+						var seen_div = '<p id="da_xem" style="float: right; color: green">Đã xem</p>';
+						if(!document.getElementById('da_xem')) {
+							$("#" + private_chat).append(seen_div);	
+							var wtf = $('#' + private_chat);
+							var height = wtf[0].scrollHeight;
+							wtf.scrollTop(height);							
+						}				
+					}
+					// Xử lý phần hiển thị icon đang nhập tin nhắn trong khung chat
+					if(info['status']) {
+						if(info['status'] == 'texting') {
+							var text_div = '<p id="text_status"><i class="fa fa-commenting fa-3x" aria-hidden="true"></i></p>';
+							if(!document.getElementById('text_status')) {
+								$("#" + private_chat).append(text_div);
+								var wtf = $('#' + private_chat);
+								var height = wtf[0].scrollHeight;
+								wtf.scrollTop(height);							
+							}
+						} else {
+							$("#text_status").remove();
+						}	
 					}
 				}
 			}
@@ -182,7 +234,8 @@ function create_tab_chat(chatter, private_chat) {
 	le3.focus();
 	// khi mới mở tab chat thì load file sử dụng ra trước, lợi dụng cái này để xóa tên người nhận trong CSDL trước
 	loadData(private_chat);
-	le3.keypress(function(event) {
+	// le3.keypress(function(event) {
+	le3.keydown(function(event) {
 		var keycode = (event.keyCode ? event.keyCode : event.which);
 		if (keycode == '13') {
 			if(le3.val()) {
@@ -209,6 +262,47 @@ function create_tab_chat(chatter, private_chat) {
 				var height = wtf[0].scrollHeight;
 				wtf.scrollTop(height);
 				sendPrivate(le3.val(), private_chat, le3, chatter);
+				$.ajax({
+					url : 'user_texting_status.php',
+					type: 'post',
+					data : {
+						private_chat : private_chat,
+						text : "texted"
+					},
+					success : function () {
+						// alert("hihi");
+					}
+				});
+			}
+		} else if((keycode >= '48' && keycode <= '90') || (keycode >= '97' && keycode <= '122')) {
+			// alert("hihi");
+			if(le3.val().length == 0) {
+				$.ajax({
+					url : 'user_texting_status.php',
+					type: 'post',
+					data : {
+						private_chat : private_chat,
+						text : "texting"
+					},
+					success : function () {
+						// alert(le3.val().length);
+					}
+				});
+			}
+		} else if(keycode == '8') {
+			// alert(le3.val());
+			if(le3.val().length <= 1) {
+				$.ajax({
+					url : 'user_texting_status.php',
+					type: 'post',
+					data : {
+						private_chat : private_chat,
+						text : "texted"
+					},
+					success : function () {
+						// alert("hihi");
+					}
+				});
 			}
 		}
 	});
@@ -228,6 +322,7 @@ $(document).on("click", ".private_msg", function() {
 		var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 		// Nếu không tồn tại tab chat giữa 2 thằng thì tạo tab chat
 		if(!document.getElementById(private_chat)) {
+			var del_close_notif_first = 1;
 			if(del_close_notif_first == 1) {
 				// Khi 1 thằng ấn vào tên thằng khác để chat thì phải xóa trường user_chat_with trước trong cả 2 bảng để 
 				// chỉ hiện thông báo khi cả 2 thằng đang chat cùng nhau
@@ -245,6 +340,7 @@ $(document).on("click", ".show_friends", function() {
 	var chatter = $(this).children().html();
 	var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 	if(!document.getElementById(private_chat)) {
+		var del_close_notif_first = 1;
 		if(del_close_notif_first == 1) {
 			get_close_tab_notification(private_chat, del_close_notif_first);
 			get_request_close_notification(private_chat, del_close_notif_first, chatter);
@@ -259,6 +355,7 @@ $(document).on("click", ".list_message_notifi", function() {
 	var chatter = $(this).children().first().html();
 	var private_chat = (user_session < chatter) ? user_session + "_" + chatter : chatter + "_" + user_session;
 	if(!document.getElementById(private_chat)) {
+		var del_close_notif_first = 1;
 		if(del_close_notif_first == 1) {
 			get_close_tab_notification(private_chat, del_close_notif_first);
 			get_request_close_notification(private_chat, del_close_notif_first, chatter);
@@ -293,7 +390,7 @@ function get_logout_notification() {
 setInterval(get_logout_notification, 4000);
 
 // Khi 1 user tắt tab chat thì thông báo cho thằng đang chat cùng nó biết
-var del_close_notif_first = 1;
+// var del_close_notif_first = 1;
 function get_close_tab_notification(private_chat, del_close_notif_first) {
 	$.ajax({
 		url : "get_close_tab_notification.php",
